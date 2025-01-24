@@ -1,5 +1,13 @@
 -- For each team, what is the average number of wins per season, in the 21st century?
 
+.headers off
+
+SELECT name, round(AVG(wins),2)
+FROM teams
+WHERE year >= 2001
+GROUP BY name
+
+-- ORDER BY year
 -- Expected result:
 --
 -- +-------------------------------+------------------+
